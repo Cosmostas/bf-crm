@@ -25,11 +25,17 @@ dependencies {
 	implementation("org.flywaydb:flyway-core")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	implementation("org.junit.jupiter:junit-jupiter:5.7.0")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("org.postgresql:postgresql")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.testcontainers:junit-jupiter")
 	testImplementation("org.testcontainers:postgresql")
+	// https://mvnrepository.com/artifact/org.hibernate/hibernate-core
+	implementation("org.hibernate:hibernate-core:5.5.4.Final")
+// https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager
+	implementation("org.hibernate:hibernate-entitymanager:5.5.4.Final")
+
 }
 
 dependencyManagement {
