@@ -28,6 +28,7 @@ CREATE TABLE "Account" (
 
 
 
+
 ALTER TABLE "Account" ADD CONSTRAINT "Account_fk0" FOREIGN KEY ("LeadId") REFERENCES "Lead"("Id");
 
 
