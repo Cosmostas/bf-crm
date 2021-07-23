@@ -1,4 +1,4 @@
 package punccode.bfcrm.Service
 
-class emptyClass {
+class userService {
 }
