@@ -1,4 +1,4 @@
 package punccode.bfcrm.Repository
 
-class emptyClass {
+class userRepository {
 }

@@ -1,4 +1,4 @@
 package punccode.bfcrm.Controller
 
-class emptyClass {
+class userController {
 }
