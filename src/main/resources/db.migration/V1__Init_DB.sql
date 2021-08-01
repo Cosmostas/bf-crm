@@ -1,34 +1,29 @@
 CREATE TABLE "Lead" (
-       "Id" bigserial,
-       "FirstName" character varying NOT NULL,
-       "LastName" character varying NOT NULL,
-       "MiddleName" character varying,
-       "PhoneNumber" character varying NOT NULL,
-       "Email" character varying NOT NULL,
+       "Id" bigserial PRIMARY KEY,
+       "FirstName" VARCHAR NOT NULL,
+       "LastName" VARCHAR NOT NULL,
+       "MiddleName" VARCHAR,
+       "PhoneNumber" VARCHAR NOT NULL,
+       "Email" VARCHAR NOT NULL,
        "Gender" BOOLEAN NOT NULL,
        "DateofBirth" DATE NOT NULL,
-       "Login" character varying NOT NULL,
-       "Password" character varying NOT NULL,
-       CONSTRAINT "Lead_pk" PRIMARY KEY ("Id")
-) WITH (
-      OIDS=FALSE
+       "Login" VARCHAR NOT NULL,
+       "Password" VARCHAR NOT NULL
 );
 
 
 
 CREATE TABLE "Account" (
-      "Id" bigserial,
-      "LeadId" bigserial,
-      "SubscriptionType" bigserial,
-      CONSTRAINT "Account_pk" PRIMARY KEY ("Id")
-) WITH (
-      OIDS=FALSE
+      "Id" bigserial PRIMARY KEY,
+      "LeadId" INT8,
+      "SubscriptionType" INT4
 );
+ALTER TABLE "Account" ADD CONSTRAINT "Account_fk0" FOREIGN KEY ("LeadId") REFERENCES "Lead"("Id")
 
 
 
 
 
-ALTER TABLE "Account" ADD CONSTRAINT "Account_fk0" FOREIGN KEY ("LeadId") REFERENCES "Lead"("Id");
+
 
 
