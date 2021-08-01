@@ -19,7 +19,6 @@ repositories {
 extra["testcontainersVersion"] = "1.15.3"
 
 dependencies {
-	implementation("org.flywaydb.flyway-test-extensions:flyway-test:7.0.0")
 	implementation("org.flywaydb:flyway-core")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
@@ -31,6 +30,7 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.testcontainers:junit-jupiter")
 	testImplementation("org.testcontainers:postgresql")
+	testImplementation("org.flywaydb.flyway-test-extensions:flyway-spring-test:7.0.0")
 }
 
 dependencyManagement {
