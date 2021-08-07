@@ -4,7 +4,7 @@ import java.util.*
 import javax.persistence.*
 
 @Entity
-data class leadEntity(
+data class LeadEntity(
     @Id
     @SequenceGenerator(name = "leadSeq", sequenceName ="Lead_Id_seq")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "leadSeq")
