@@ -8,8 +8,7 @@ CREATE TABLE "Lead" (
        "Gender" BOOLEAN NOT NULL,
        "DateofBirth" DATE NOT NULL,
        "Login" VARCHAR NOT NULL,
-       "Password" VARCHAR NOT NULL,
-       CONSTRAINT "Account_fk0" FOREIGN KEY ("LeadId") REFERENCES "Lead"("Id")
+       "Password" VARCHAR NOT NULL
 );
 
 
@@ -17,6 +16,6 @@ CREATE TABLE "Lead" (
 CREATE TABLE "Account" (
       "Id" bigserial PRIMARY KEY,
       "LeadId" INT8 NOT NULL ,
-      "SubscriptionType" INT4
-);
-ALTER TABLE "Account" ADD CONSTRAINT "Account_fk0" FOREIGN KEY ("LeadId") REFERENCES "Lead"("Id")
+      "SubscriptionType" INT4,
+      CONSTRAINT "Account_fk0" FOREIGN KEY ("LeadId") REFERENCES "Lead"("Id")
+)
