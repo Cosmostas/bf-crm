@@ -12,5 +12,5 @@ data class AccountEntity(
     var subscriptionType: Integer,
     @ManyToOne
     @JoinColumn(name = "lead_Id")
-    val lead: leadId
+    val leadId: Long
 )
