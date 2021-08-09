@@ -1,5 +1,6 @@
 package punccode.bfcrm.Entity
 
+import punccode.bfcrm.Repository.Enum.Gender
 import java.util.*
 import javax.persistence.*
 
@@ -15,6 +16,6 @@ data class LeadEntity(
     var middleName: String,
     var phoneNumber: String,
     var email: String,
-    var gender: Boolean,
+    var gender: Gender,
     val dateOfBirth: Date
 )
